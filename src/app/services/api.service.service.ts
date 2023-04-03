@@ -12,11 +12,11 @@ export class ApiServiceService {
 
   getBooks(): Observable<Book[]>
   {
-    return this.http.get('http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/books') as Observable<Book[]>;
+    return this.http.get('http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/api/books') as Observable<Book[]>;
   }
 
   filterBooks(year:String): Observable<Book[]>
   {
-    return this.http.get(`http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/book/filter/${year}`) as Observable<Book[]>;
+    return this.http.get(`http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/api/book/filter/${year}`) as Observable<Book[]>;
   }
 }
