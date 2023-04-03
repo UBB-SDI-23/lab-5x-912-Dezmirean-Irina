@@ -1,0 +1,46 @@
+<h2 style="margin-left: 2%;"><i class="arrow down"></i>   Check out the next list of books   <i class="arrow down"></i>  </h2>
+
+
+<div class="filtering">
+
+    <form action="/action_page.php">
+        <label for="year">Books released after year    </label>
+        <input type="text" id="year" name="year" style="background-color:  rgb(228, 230, 195); border-style: solid; border-color:rgba(228, 230, 195,1); box-shadow: 1px 1px 10px #c0c0c0;">
+        <button type="button" (click)="getInput()" style="background-color: rgb(34, 39, 37); color: white; font-family: garamond;font-size: 1em;">Search</button>
+    </form>
+
+</div>
+
+<script>
+    function getInput()
+    {
+        this.getInput(getElementById('year').value);
+    }
+</script>
+
+
+<div class="booksTable">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Country</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-data">
+                <tr *ngFor="let book of books, let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.authorName}}</td>
+                    <td>{{book.genre}}</td>
+                    <td>{{book.country}}</td>
+                    <td>{{book.year}}</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
