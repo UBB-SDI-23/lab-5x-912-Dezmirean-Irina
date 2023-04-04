@@ -11,7 +11,7 @@ import { Book } from '../books-page/model/bookModel';
 
 export class ApiServiceService {
 
-  baseURL = 'http://ec2-13-50-251-79.eu-north-1.compute.amazonaws.com/api';
+  baseURL = 'http://ec2-16-16-99-246.eu-north-1.compute.amazonaws.com/api';
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]>
