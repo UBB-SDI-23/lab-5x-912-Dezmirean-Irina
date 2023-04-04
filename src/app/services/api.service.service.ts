@@ -3,20 +3,24 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from '../books-page/model/bookModel';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class ApiServiceService {
 
+  baseURL = '/api';
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]>
   {
-    return this.http.get('http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/api/books') as Observable<Book[]>;
+    return this.http.get(`${this.baseURL}/books`) as Observable<Book[]>;
   }
 
   filterBooks(year:String): Observable<Book[]>
   {
-    return this.http.get(`http://ec2-13-51-250-53.eu-north-1.compute.amazonaws.com/api/book/filter/${year}`) as Observable<Book[]>;
+    return this.http.get(`${this.baseURL}/book/filter/${year}`) as Observable<Book[]>;
   }
 }
