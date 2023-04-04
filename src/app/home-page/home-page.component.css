@@ -1,0 +1,102 @@
+.intro
+{
+    color: rgb(34, 39, 37);
+    padding-left: 2%;
+    font-family: garamond;
+}
+
+.fa-li
+{
+    margin-left: 2%;
+    color:rgb(34, 39, 37);
+}
+
+
+.quotes
+{
+    float:right;
+    width: 50%;
+    height: 30%;
+    margin-right: 10%;
+    margin-top: -5%;
+    /* border-style: solid solid solid solid;
+    border-color: black;
+    border-width: 2px; */
+}
+
+.quotes1
+{
+    position: relative;
+    margin-left:0%;
+    margin-top: 0%;
+    width: 55%;
+}
+
+.quotes2
+{
+    position: relative;
+    margin-right: 0%;
+    float: right;
+    margin-top: -4%;
+    width: 40%;
+}
+
+.quotes3
+{
+    position: relative;
+    margin-left: 0%;
+    margin-top: 3%;
+    width: 50%;
+}
+
+.quotes4
+{
+    position: relative;
+    margin-right: 0%;
+    float: right;
+    margin-top: -2%;
+    width: 80%;
+}
+
+.quotes5
+{
+    position: relative;
+    margin-left:0%;
+    margin-top: 12%;
+    width:50%;
+}
+
+.quotes6
+{
+    position: relative;
+    margin-right: 0%;
+    float: right;
+    margin-top: -10%;
+    width: 40%;
+}
+
+.author
+{
+    text-align: right;
+    font-style: italic;
+}
+
+.quote
+{
+    text-align: justify;
+    font-style: italic;
+}
+
+
+.line1 
+{
+    position: absolute;
+    margin-top:7%;
+    margin-left:28.5%;
+    width: 660px;
+    border-bottom: 10px solid rgba(34, 39, 37,0.2);
+    transform:
+        translateY(-80px)
+        translateX(-250px)
+        rotate(120deg); 
+}
