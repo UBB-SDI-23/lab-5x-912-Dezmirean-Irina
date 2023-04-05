@@ -7,12 +7,14 @@ import { BooksPageComponent } from './books-page/books-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './books-page/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

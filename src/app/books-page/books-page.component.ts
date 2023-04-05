@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './model/bookModel';
 import { ApiServiceService } from '../services/api.service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-books-page',
@@ -11,14 +12,14 @@ export class BooksPageComponent implements OnInit
 {
   books: Book[] = [];
 
-  constructor(private apiService: ApiServiceService){}
+  constructor(private apiService: ApiServiceService, private router: Router){}
 
   ngOnInit(): void 
   {
     this.apiService.getBooks().subscribe(
       (result: Book[]) => 
       {
-        this.books = result;
+        this.books = result.sort();
       });
   }
 
@@ -30,6 +31,16 @@ export class BooksPageComponent implements OnInit
         {
         this.books = result;
         });
+  }
+
+  showDetails(bookId: string): void
+  {
+    this.router.navigateByUrl(`books/${bookId}`);
+  }
+
+  goToAdd()
+  {
+    this.router.navigateByUrl(`books.add`);
   }
 
 }
