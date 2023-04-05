@@ -45,13 +45,13 @@ export class BooksPageComponent implements OnInit
 
   sortByName()
   {
-    this.books = this.books.sort((a,b) => (Number)(a.year));
+    this.books = this.books.sort(function(a,b) {return (Number)(a.year) - (Number)(b.year);});
   }
 
   sortByNameReversed()
   {
   
-    this.books = this.books.sort((a,b) => (Number)(a.year)).reverse();
+    this.books = this.books.sort(function(a,b) {return (Number)(b.year) - (Number)(a.year);});
       
   }
 
