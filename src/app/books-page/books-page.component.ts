@@ -19,7 +19,7 @@ export class BooksPageComponent implements OnInit
     this.apiService.getBooks().subscribe(
       (result: Book[]) => 
       {
-        this.books = result.sort();
+        this.books = result;
       });
   }
 
