@@ -34,12 +34,14 @@
 
         <tbody class="table-data">
                 <tr *ngFor="let book of books, let i = index">
-                    <td>{{i+1}}</td>
-                    <td>{{book.title}}</td>
-                    <td>{{book.authorName}}</td>
-                    <td>{{book.genre}}</td>
-                    <td>{{book.country}}</td>
-                    <td>{{book.year}}</td>
+                    <a [routerLink]="'books/'+book.id">
+                        <td>{{i+1}}</td>
+                        <td>{{book.title}}</td>
+                        <td>{{book.authorName}}</td>
+                        <td>{{book.genre}}</td>
+                        <td>{{book.country}}</td>
+                        <td>{{book.year}}</td>
+                    </a>
                 </tr>
         </tbody>
     </table>
