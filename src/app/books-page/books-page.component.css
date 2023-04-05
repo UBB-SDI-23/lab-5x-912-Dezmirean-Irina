@@ -71,4 +71,7 @@ tr:hover
     float: right;
     padding-right: 2%;
     margin-top: -3%;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
 }
