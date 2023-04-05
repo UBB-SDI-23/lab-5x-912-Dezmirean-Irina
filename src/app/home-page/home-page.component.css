@@ -96,7 +96,7 @@
     width: 660px;
     border-bottom: 10px solid rgba(34, 39, 37,0.2);
     transform:
-        translateY(-50px)
-        translateX(-250px)
+        translateY(-30px)
+        translateX(-230px)
         rotate(120deg); 
 }
