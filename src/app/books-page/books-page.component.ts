@@ -45,23 +45,14 @@ export class BooksPageComponent implements OnInit
 
   sortByName()
   {
-    // this.apiService.getBooks().subscribe(
-    //   (result: Book[]) =>
-    //   {
-    //     this.books = result.sort((a,b) => a.title.localeCompare(b.title));
-    //   }
-    // )
-    this.books = this.books.sort((a,b) => a.title.localeCompare(b.title));
+    this.books = this.books.sort((a,b) => a.year.localeCompare(b.year));
   }
 
   sortByNameReversed()
   {
-    this.apiService.getBooks().subscribe(
-      (result: Book[]) =>
-      {
-        this.books = (result.sort((a,b) => a.title.localeCompare(b.title))).reverse();
-      }
-    )
+  
+    this.books = this.books.sort((a,b) => a.year.localeCompare(b.year)).reverse();
+      
   }
 
 }
