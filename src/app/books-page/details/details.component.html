@@ -1,7 +1,9 @@
-<div>
-    <div>Title: {{book?.title}}</div>
-    <div>Author: {{book?.authorName}}</div>
-    <div>Genre: {{book?.genre}}</div>
-    <div>Country: {{book?.country}}</div>
-    <div>Release year: {{book?.year}}</div>
-</div>
+<ng-container *ngIf="book">
+    <div>
+        <div>Title: {{book.title}}</div>
+        <div>Author: {{book.authorName}}</div>
+        <div>Genre: {{book.genre}}</div>
+        <div>Country: {{book.country}}</div>
+        <div>Release year: {{book.year}}</div>
+    </div>    
+</ng-container>
