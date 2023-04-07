@@ -73,3 +73,9 @@ tr:hover
     padding-right: 2%;
     margin-top: -3%;
 }
+
+a:link,a:visited
+{
+    color:  rgb(34, 39, 37);
+    text-decoration: none;
+}
