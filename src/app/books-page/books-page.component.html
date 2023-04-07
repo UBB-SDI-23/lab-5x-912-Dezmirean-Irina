@@ -4,7 +4,7 @@
 <div class="filtering">
 
     <form action="/action_page.php">
-        <input type="text" id="year" name="year" placeholder="Books released after year" style="background-color:  rgb(228, 230, 195); border-style: solid; border-color:rgba(228, 230, 195,1); box-shadow: 1px 1px 10px #c0c0c0;border-radius: 5pxn;">
+        <input type="text" id="year" name="year" placeholder="Books released after year" style="background-color:  rgb(228, 230, 195); border-style: solid; border-color:rgba(228, 230, 195,1); box-shadow: 1px 1px 10px #c0c0c0;border-radius: 5px;">
         <button type="button" (click) = "getInput()" style="background-color: rgb(34, 39, 37); color: white; font-family: garamond; margin: 1%;"><i class="fa fa-search" style="font-size:15px"></i></button>
         <button type="button" (click) = "sortByName()" style="background-color: rgb(34, 39, 37); color: white; font-family: garamond; margin: -0.1%;"><i class="fa fa-sort-asc" style="font-size:15px"></i></button>
         <button type="button" (click) = "sortByNameReversed()" style="background-color: rgb(34, 39, 37); color: white; font-family: garamond; margin: -0.1%;"><i class="fa fa-sort-desc" style="font-size:15px"></i></button>
@@ -35,7 +35,7 @@
 
         <tbody class="table-data">
                 <tr *ngFor="let book of books, let i = index">
-                        <td><a (click) = "showDetails(book.id)"> {{i+1}}</a></td>
+                        <td><a (click) = "showDetails(book.id)"> {{book.id}}</a></td>
                         <td>{{book.title}}</td>
                         <td>{{book.authorName}}</td>
                         <td>{{book.genre}}</td>

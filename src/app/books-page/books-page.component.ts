@@ -41,7 +41,7 @@ export class BooksPageComponent implements OnInit
 
   goToAdd()
   {
-    this.router.navigateByUrl(`books.add`);
+    this.router.navigateByUrl(`books/add`);
   }
 
   sortByName()
