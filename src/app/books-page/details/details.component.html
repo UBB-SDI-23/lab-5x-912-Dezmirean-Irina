@@ -1,18 +1,18 @@
 <ng-container *ngIf="bookDetailed">
     <div class="details">
         <div class="book-info">
-            <div>Title: {{bookDetailed.title}}</div>
-            <div>Author: {{bookDetailed.authorName}}</div>
-            <div>Genre: {{bookDetailed.genre}}</div>
-            <div>Country: {{bookDetailed.country}}</div>
-            <div>Release year: {{bookDetailed.year}}</div>
+            <p>Title: {{bookDetailed.title}}</p>
+            <p>Author: {{bookDetailed.authorName}}</p>
+            <p>Genre: {{bookDetailed.genre}}</p>
+            <p>Country: {{bookDetailed.country}}</p>
+            <p>Release year: {{bookDetailed.year}}</p>
         </div>    
-        <div class="author-info">
+        <!-- <div class="author-info">
             <div>First name: {{bookDetailed.author.firstName}}</div>
             <div>Last name: {{bookDetailed.author.lastName}}</div>
             <div>Birth: {{bookDetailed.author.birth}}</div>
             <div>Death: {{bookDetailed.author.death}}</div>
             <div>Nationality: {{bookDetailed.author.nationality}}</div>
-        </div>
+        </div> -->
     </div>
 </ng-container>
