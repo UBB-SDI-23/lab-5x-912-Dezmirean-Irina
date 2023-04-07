@@ -22,7 +22,7 @@ export class DetailsComponent implements OnInit
         this.apiService.getBookById(this.bookId!).subscribe((book: Book) =>
         {
           this.book = book;
-        });
+        })
       });
   }
 
