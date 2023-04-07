@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit
   {
     this.activatedRoute.params.subscribe(params =>
       {
-        this.bookId = params['id'];
+        this.bookId = params['book_id'];
         this.apiService.getBookById(this.bookId!).subscribe((book: Book) =>
         {
           this.book = book;
