@@ -66,10 +66,10 @@ tr:hover
 .filtering
 {
     position: relative;
-    width: 18%;
+    width: 50%;
     height: 5%;
     float: right;
-    margin-right: 15%;
+    margin-right: 10%;
     padding-right: 2%;
     margin-top: -3%;
 }
