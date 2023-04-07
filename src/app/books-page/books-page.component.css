@@ -79,3 +79,9 @@ a:link,a:visited
     color:  rgb(34, 39, 37);
     text-decoration: none;
 }
+
+th
+{
+    position: sticky;
+    /* top: 0;  */
+}

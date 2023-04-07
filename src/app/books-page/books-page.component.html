@@ -35,7 +35,7 @@
 
         <tbody class="table-data">
                 <tr *ngFor="let book of books, let i = index">
-                        <td><a (click) = "showDetails('book.id')"> {{i+1}}</a></td>
+                        <td><a (click) = "showDetails(book.id)"> {{i+1}}</a></td>
                         <td>{{book.title}}</td>
                         <td>{{book.authorName}}</td>
                         <td>{{book.genre}}</td>
