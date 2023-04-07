@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api.service.service';
 import { Book } from '../model/bookModel';
+import { BookDetailed } from "../model/bookModel";
+
 
 @Component({
   selector: 'app-details',
@@ -11,8 +13,8 @@ import { Book } from '../model/bookModel';
 export class DetailsComponent implements OnInit
 {
   bookId?: string;
-  book?: Book;
-  
+  bookDetailed?: BookDetailed;
+
   constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void 
@@ -20,9 +22,9 @@ export class DetailsComponent implements OnInit
     this.activatedRoute.params.subscribe(params =>
       {
         this.bookId = params['book_id'];
-        this.apiService.getBookById(this.bookId!).subscribe((book: Book) =>
+        this.apiService.getBookById(this.bookId!).subscribe((book: BookDetailed) =>
         {
-          this.book = book;
+          this.bookDetailed = book;
         })
       });
   }

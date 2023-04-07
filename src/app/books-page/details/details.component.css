@@ -1,0 +1,28 @@
+.details
+{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 70%;
+    height: 50%;
+    border-style: solid; 
+    border-color:rgba(228, 230, 195,1); 
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #c0c0c0;
+}
+
+.book-info
+{
+    position: relative;
+    margin: 2%;
+    float: left;
+    text-align: justify;
+}
+
+.author-info
+{
+    position: relative;
+    margin: 2%;
+    float: right;
+    text-align: justify;
+}

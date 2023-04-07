@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Book } from '../books-page/model/bookModel';
+import { Book, BookDetailed } from '../books-page/model/bookModel';
 
 
 @Injectable({
@@ -24,8 +24,8 @@ export class ApiServiceService {
     return this.http.get(`${this.baseURL}/book/filter/${year}`) as Observable<Book[]>;
   }
 
-  getBookById(bookId: string): Observable<Book>
+  getBookById(bookId: string): Observable<BookDetailed>
   {
-    return this.http.get(`${this.baseURL}/book/${bookId}`) as Observable<Book>;
+    return this.http.get(`${this.baseURL}/book/${bookId}`) as Observable<BookDetailed>;
   }
 }
