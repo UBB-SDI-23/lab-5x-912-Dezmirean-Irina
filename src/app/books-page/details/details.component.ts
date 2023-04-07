@@ -12,6 +12,7 @@ export class DetailsComponent implements OnInit
 {
   bookId?: string;
   book?: Book;
+  
   constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void 
