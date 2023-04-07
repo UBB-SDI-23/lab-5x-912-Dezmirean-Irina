@@ -1,5 +1,5 @@
-<div class="details">
-    <ng-container *ngIf="bookDetailed">
+<ng-container *ngIf="bookDetailed">
+    <div class="details"></div>
         <div class="book-info">
             <div>Title: {{bookDetailed.title}}</div>
             <div>Author: {{bookDetailed.authorName}}</div>
@@ -14,5 +14,4 @@
             <div>Death: {{bookDetailed.author.death}}</div>
             <div>Nationality: {{bookDetailed.author.nationality}}</div>
         </div>
-    </ng-container>
-</div>
+</ng-container>
