@@ -8,10 +8,10 @@
     border-style: solid solid solid solid; 
     border-color:rgba(228, 230, 195,1); 
     border-radius: 10px;
-    box-shadow: 2px 2px 5px #c0c0c0;
+    box-shadow: 2px 2px 2px 2px 5px #c0c0c0;
 }
 
-/* .book-info
+.book-info
 {
     position: relative;
     margin: 2%;
@@ -19,10 +19,10 @@
     text-align: justify;
 }
 
-.author-info
+/* .author-info
 {
     position: relative;
     margin: 2%;
     float: right;
     text-align: justify;
-} */
+}  */
