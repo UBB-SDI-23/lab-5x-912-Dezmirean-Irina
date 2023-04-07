@@ -33,7 +33,7 @@ export class BooksPageComponent implements OnInit
         });
   }
 
-  showDetails(bookId: string): void
+  showDetails(bookId: string)
   {
     console.log(bookId);
     this.router.navigateByUrl(`books/${bookId}`);
