@@ -48,7 +48,7 @@ export class AddBookComponent
 
   addBook()
   {
-    console.log("in addBook() function")
+    alert("in addBook() function" + this.title + this.author_id + this.author_name+this.genre+this.country+this.year)
     if(this.title && this.genre && this.country && this.year && this.author_name && this.author_id)
     {
       const book: AddBookDto = 
