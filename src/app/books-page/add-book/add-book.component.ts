@@ -57,7 +57,7 @@ export class AddBookComponent
           alert("The book has been added to the list!")
           this.router.navigateByUrl('books');
         },
-        (err) => {alert(err)}
+        (err) => {alert("Something went wrong")}
       )
     }
   }
