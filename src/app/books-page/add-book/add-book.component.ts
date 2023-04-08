@@ -54,8 +54,8 @@ export class AddBookComponent
       this.apiService.addBook(book, this.auth.author_id).subscribe(
         (result: Book)=>
         {
-          this.router.navigateByUrl('books');
           alert("The book has been added to the list!")
+          this.router.navigateByUrl('books');
         },
         (err) => {alert(err)}
       )
