@@ -9,7 +9,7 @@
         
             <label for="author">Author</label>
             <select id="author" name="author">
-                <option *ngFor="let author of authors" (click)="setSelectedAuthorId(author.author_id, author.firstName, author.lastName)">
+                <option *ngFor="let author of authors" [(ngModel)]="auth">
                    {{author.firstName + " " + author.lastName}}
                 <option>
             </select>

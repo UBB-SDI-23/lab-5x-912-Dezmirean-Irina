@@ -16,12 +16,10 @@ export class AddBookComponent
   books: Book[] = [];
 
   title?: string;
-  author_id?: string;
-  author_name?: string;
   genre?: string;
   country?: string;
   year?: string;
-
+  auth?: Author;
 
   constructor(private apiService: ApiServiceService, private router: Router){}
 
@@ -40,27 +38,20 @@ export class AddBookComponent
         });
   }
 
-  setSelectedAuthorId(authorId: string, fName: string, lName: string)
-  {
-    alert("In set author function with id"+authorId+fName+lName)
-    this.author_id = authorId;
-    this.author_name = fName + " "+ lName;
-  }
-
   addBook()
   {
-    alert("in addBook() function" + this.title + this.author_id + this.author_name+this.genre+this.country+this.year)
-    if(this.title && this.genre && this.country && this.year && this.author_name && this.author_id)
+    alert(this.title + " " + this.auth+" " +this.genre+" "+this.country+" "+this.year)
+    if(this.title && this.genre && this.country && this.year && this.auth)
     {
       const book: AddBookDto = 
       {
           title: this.title,
-          authorName: this.author_name,
+          authorName: this.auth.firstName+" "+this.auth.lastName,
           genre: this.genre,
           country: this.country,
           year: this.year
       }
-      this.apiService.addBook(book, this.author_id).subscribe(
+      this.apiService.addBook(book, this.auth.author_id).subscribe(
         (result: Book)=>
         {
           this.router.navigateByUrl('books');
