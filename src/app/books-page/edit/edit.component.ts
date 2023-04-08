@@ -44,13 +44,16 @@ export class EditComponent
               this.country = this.book.country;
               this.year = this.book.year;
               this.authorName = this.book.authorName;
+              document.getElementById('title')?.setAttribute("placeholder",this.title);
+              document.getElementById('genre')?.setAttribute("placeholder",this.genre);
+              document.getElementById('country')?.setAttribute("placeholder",this.country);
+              document.getElementById('year')?.setAttribute("placeholder",this.year);
             })
           });
   }
 
   editBook()
   {
-    alert(this.title)
     if(this.title && this.genre && this.country && this.year && this.auth)
     {
       const book: AddBookDto = 
@@ -64,8 +67,8 @@ export class EditComponent
       this.apiService.editBook(book, this.bookId!).subscribe(
         (result: Book)=>
         {
-          this.router.navigateByUrl('books');
           alert("The book has been modified!")
+          this.router.navigateByUrl('books');
         },
         (err) => {alert(err)}
       )
