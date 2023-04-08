@@ -3,9 +3,6 @@ import { Author } from '../model/authorModel';
 import { ApiServiceService } from 'src/app/services/api.service.service';
 import { Router } from '@angular/router';
 import { AddBookDto, Book } from '../model/bookModel';
-import { MatFormField} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import { MatOptionModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-add-book',
