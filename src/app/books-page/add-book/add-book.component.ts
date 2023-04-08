@@ -42,6 +42,7 @@ export class AddBookComponent
 
   setSelectedAuthorId(authorId: string, fName: string, lName: string)
   {
+    alert("In set author function with id"+authorId+fName+lName)
     this.author_id = authorId;
     this.author_name = fName + " "+ lName;
   }

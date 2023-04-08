@@ -9,8 +9,8 @@
         
             <label for="author">Author</label>
             <select id="author" name="author">
-                <option *ngFor="let author of authors">
-                    <a (click) = "setSelectedAuthorId(author.author_id, author.firstName, author.lastName)">{{author.firstName + " " + author.lastName}}</a>
+                <option *ngFor="let author of authors" (click)="setSelectedAuthorId(author.author_id, author.firstName, author.lastName)">
+                   {{author.firstName + " " + author.lastName}}
                 <option>
             </select>
         
@@ -25,7 +25,7 @@
             <label for="year">Release year</label>
             <input type="text" id="year" name="year" placeholder="2008" [(ngModel)]="year">
             
-            <button type="submit" (click)="addBook()">ADD BOOK</button>
+            <button type="submit">ADD BOOK</button>
         </div>
 
     </div>
