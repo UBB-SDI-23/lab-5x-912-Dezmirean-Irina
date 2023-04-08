@@ -8,8 +8,8 @@
             <input type="text" id="title" name="title" placeholder="Staring at the sun" [(ngModel)]="title">
         
             <label for="author">Author</label>
-            <select id="author" name="author">
-                <option *ngFor="let author of authors" [(ngModel)]="auth">
+            <select id="author" name="author" [(ngModel)]="auth">
+                <option *ngFor="let author of authors" [ngValue]="author">
                    {{author.firstName + " " + author.lastName}}
                 <option>
             </select>
