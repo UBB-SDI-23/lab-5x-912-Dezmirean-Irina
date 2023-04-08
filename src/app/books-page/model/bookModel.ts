@@ -20,3 +20,12 @@ export interface BookDetailed
     year: string;
     author: Author;
 }
+
+export interface AddBookDto
+{
+    title: string;
+    authorName: string;
+    genre: string;
+    country: string;
+    year: string;
+}
