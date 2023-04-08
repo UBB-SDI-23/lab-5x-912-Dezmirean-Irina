@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api.service.service';
 import { Book } from '../model/bookModel';
 import { BookDetailed } from "../model/bookModel";
@@ -15,7 +15,7 @@ export class DetailsComponent implements OnInit
   bookId?: string;
   bookDetailed?: BookDetailed;
 
-  constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute) {}
+  constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void 
   {
@@ -28,5 +28,12 @@ export class DetailsComponent implements OnInit
         })
       });
   }
+
+  goToEditBook(bookId: string)
+  {
+
+    this.router.navigateByUrl(`books/edit/${bookId}`);
+  }
+
 
 }

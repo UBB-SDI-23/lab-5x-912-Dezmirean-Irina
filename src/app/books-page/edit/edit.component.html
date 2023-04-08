@@ -4,7 +4,7 @@
 
         <div class="left-side">
             <label for="title">Title</label>
-            <input type="text" id="title" name="title" placeholder="{{title}}" [(ngModel)]="title">
+            <input type="text" id="title" name="title" placeholder={{this.title}} [(ngModel)]="title">
         
             <label for="author">Author</label>
             <select id="author" name="author" [(ngModel)]="auth">
@@ -14,19 +14,23 @@
             </select>
         
             <label for="genre">Genre</label>
-            <input type="text" id="genre" name="genre" placeholder="{{genre}}" [(ngModel)]="genre">
+            <input type="text" id="genre" name="genre" placeholder="{{this.genre}}" [(ngModel)]="genre">
         </div>
 
         <div class="right-side">
             <label for="country">Country</label>
-            <input type="text" id="country" name="country" placeholder="{{country}}" [(ngModel)]="country">
+            <input type="text" id="country" name="country" placeholder="{{this.country}}" [(ngModel)]="country">
         
             <label for="year">Release year</label>
-            <input type="text" id="year" name="year" placeholder="{{year}}" [(ngModel)]="year">
+            <input type="text" id="year" name="year" placeholder="{{this.year}}" [(ngModel)]="year">
             
             <button type="submit">EDIT BOOK</button>
         </div>
 
     </div>
+
+    <script>
+        document.getElementById("title").setAttribute("placeholder",this.title)
+    </script>
 
 </form>

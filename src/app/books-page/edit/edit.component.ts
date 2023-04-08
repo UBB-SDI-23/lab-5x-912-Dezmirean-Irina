@@ -14,11 +14,12 @@ export class EditComponent
   authors: Author[] = [];
   book?: AddBookDto;
 
-  bookId?: string
-  title?: string;
-  genre?: string;
-  country?: string;
-  year?: string;
+  bookId: string =''
+  title: string=''
+  genre: string=''
+  country: string=''
+  year: string=''
+  authorName: string=''
   auth?: Author;
 
   constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
@@ -34,17 +35,22 @@ export class EditComponent
 
         this.activatedRoute.params.subscribe(params =>
           {
-            this.bookId = params['book_id'];
+            this.bookId = params['bookId'];
             this.apiService.getBookById(this.bookId!).subscribe((book: AddBookDto) =>
             {
               this.book = book;
+              this.title = this.book.title;
+              this.genre = this.book.genre;
+              this.country = this.book.country;
+              this.year = this.book.year;
+              this.authorName = this.book.authorName;
             })
           });
   }
 
   editBook()
   {
-    
+    alert(this.title)
     if(this.title && this.genre && this.country && this.year && this.auth)
     {
       const book: AddBookDto = 
