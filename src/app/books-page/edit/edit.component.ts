@@ -65,13 +65,11 @@ export class EditComponent
           year: this.year
       }
       this.apiService.editBook(book, this.bookId!).subscribe(
-        (result: Book)=>
+        (result: AddBookDto)=>
         {
           alert("The book has been modified!")
           this.router.navigateByUrl('books');
-          alert("The book has been modified!")
-        },
-        (err) => {alert(err)}
+        }
       )
     }
   }
