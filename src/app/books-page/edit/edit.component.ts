@@ -1,44 +1,48 @@
 import { Component } from '@angular/core';
-import { Author } from '../model/authorModel';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api.service.service';
-import { Router } from '@angular/router';
+import { Author } from '../model/authorModel';
 import { AddBookDto, Book } from '../model/bookModel';
 
 @Component({
-  selector: 'app-add-book',
-  templateUrl: './add-book.component.html',
-  styleUrls: ['./add-book.component.css']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class AddBookComponent 
+export class EditComponent 
 {
-
   authors: Author[] = [];
-  books: Book[] = [];
+  book?: AddBookDto;
 
+  bookId?: string
   title?: string;
   genre?: string;
   country?: string;
   year?: string;
   auth?: Author;
 
-  constructor(private apiService: ApiServiceService, private router: Router){}
+  constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void 
   {
-    this.apiService.getBooks().subscribe(
-      (result: Book[]) => 
-      {
-        this.books = result.sort();
-      });
 
       this.apiService.getAuthors().subscribe(
         (result: Author[]) => 
         {
           this.authors = result.sort();
         });
+
+        this.activatedRoute.params.subscribe(params =>
+          {
+            this.bookId = params['book_id'];
+            this.apiService.getBookById(this.bookId!).subscribe((book: AddBookDto) =>
+            {
+              this.book = book;
+            })
+          });
   }
 
-  addBook()
+  editBook()
   {
     
     if(this.title && this.genre && this.country && this.year && this.auth)
@@ -51,16 +55,19 @@ export class AddBookComponent
           country: this.country,
           year: this.year
       }
-      this.apiService.addBook(book, this.auth.author_id).subscribe(
+      this.apiService.editBook(book, this.bookId!).subscribe(
         (result: Book)=>
         {
           this.router.navigateByUrl('books');
-          alert("The book has been added to the list!")
+          alert("The book has been modified!")
         },
         (err) => {alert(err)}
       )
     }
   }
 
-}
 
+
+
+
+}

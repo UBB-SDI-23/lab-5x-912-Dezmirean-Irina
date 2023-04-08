@@ -5,6 +5,8 @@ import { BooksPageComponent } from './books-page/books-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { DetailsComponent } from './books-page/details/details.component';
 import { AddBookComponent } from './books-page/add-book/add-book.component';
+import { EditComponent } from './books-page/edit/edit.component';
+import { DeleteComponent } from './books-page/delete/delete.component';
 
 const routes: Routes = [
   {
@@ -34,7 +36,15 @@ const routes: Routes = [
   {
     path: "books/:book_id",
     component: DetailsComponent
-  }
+  },
+  {
+    path: "books/edit/:book_id",
+    component: EditComponent
+  },
+  {
+    path: "books/delete/:book_id",
+    component: DeleteComponent
+   }
 ];
 
 @NgModule({

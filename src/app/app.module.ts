@@ -13,6 +13,8 @@ import { AddBookComponent } from './books-page/add-book/add-book.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { EditComponent } from './books-page/edit/edit.component';
+import { DeleteComponent } from './books-page/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MatOptionModule } from '@angular/material/core';
     BooksPageComponent,
     HomePageComponent,
     DetailsComponent,
-    AddBookComponent
+    AddBookComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

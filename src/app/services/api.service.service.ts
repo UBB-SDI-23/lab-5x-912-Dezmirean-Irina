@@ -39,4 +39,9 @@ export class ApiServiceService {
   {
     return this.http.post(`${this.baseURL}/author/${authorId}/book`, book) as Observable<Book>;
   }
+
+  editBook(book: AddBookDto, bookId: string): Observable<Book>
+  {
+    return this.http.put(`${this.baseURL}/book/${bookId}`, book) as Observable<Book>
+  }
 }

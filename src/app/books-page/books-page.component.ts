@@ -35,7 +35,6 @@ export class BooksPageComponent implements OnInit
 
   showDetails(bookId: string)
   {
-    // alert(bookId);
     this.router.navigateByUrl(`books/${bookId}`)
   }
 
@@ -54,6 +53,17 @@ export class BooksPageComponent implements OnInit
   
     this.books = this.books.sort(function(a,b) {return (Number)(b.year) - (Number)(a.year);});
       
+  }
+
+  goToEditBook(bookId: string)
+  {
+
+    this.router.navigateByUrl(`books/edit/${bookId}`);
+  }
+
+  goToDeleteBook(bookId: string)
+  {
+    this.router.navigateByUrl(`books/delete/${bookId}`);
   }
 
 }
