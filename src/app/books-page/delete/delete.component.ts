@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api.service.service';
 import { BookDetailed } from '../model/bookModel';
@@ -12,6 +12,7 @@ export class DeleteComponent
 {
   bookId?: string;
   bookDetailed?: BookDetailed;
+  @Output() refresh = new EventEmitter<void>();
 
   constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
@@ -29,7 +30,7 @@ export class DeleteComponent
 
   deleteBook()
   {
-     this.apiService.deleteBook(this.bookId!);
+     this.apiService.deleteBook(this.bookId!).subscribe( () => this.refresh.emit());
      alert("The book has been removed from the list!");
      this.router.navigateByUrl('books');
   }

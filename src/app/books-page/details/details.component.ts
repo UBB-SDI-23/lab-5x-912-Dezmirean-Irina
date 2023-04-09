@@ -35,5 +35,10 @@ export class DetailsComponent implements OnInit
     this.router.navigateByUrl(`books/edit/${bookId}`);
   }
 
+  goToDeleteBook(bookId: string)
+  {
+    this.router.navigateByUrl(`books/delete/${bookId}`);
+  }
+
 
 }
