@@ -52,7 +52,7 @@ export class AddBookComponent
           year: this.year
       }
       this.apiService.addBook(book, this.auth.author_id).subscribe(
-        (result: Book)=>
+        (result: AddBookDto)=>
         {
           alert("The book has been added to the list!")
           this.router.navigateByUrl('books');

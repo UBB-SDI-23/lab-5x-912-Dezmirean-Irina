@@ -8,6 +8,7 @@
         
             <label for="author">Author</label>
             <select id="author" name="author" [(ngModel)]="auth">
+                <option hidden>{{this.authorName}}</option>
                 <option *ngFor="let author of authors" [ngValue]="author">
                    {{author.firstName + " " + author.lastName}}
                 <option>
