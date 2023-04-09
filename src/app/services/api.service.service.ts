@@ -45,10 +45,9 @@ export class ApiServiceService {
     return this.http.put(`${this.baseURL}/book/${bookId}`, book) as Observable<Book>
   }
 
-  deleteBook(bookId: string)
+  deleteBook(bookId: string): Observable<{}>
   {
-    // alert(bookId);
-    this.http.delete(`${this.baseURL}/book/${bookId}`);
-    this.getBooks();
+    return this.http.delete(`${this.baseURL}/book/${bookId}`) as Observable<{}>;
+
   }
 }
