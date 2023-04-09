@@ -1,29 +1,28 @@
-<ng-container *ngIf="bookDetailed">
+<!-- <ng-container *ngIf="bookDetailed"> -->
     <div class="warning">
         <i class="fa fa-exclamation-circle" style="font-size:50px;color:rgb(136, 90, 90);margin-right: 2%;margin-top: -1%;"></i> Are you sure you want to delete this book?
     </div>
+
+    <button (click) = "deleteBook()">DELETE</button>
+    <button (click) = "cancelDeleteBook()">CANCEL</button>
+    
     <div class="details">
         <div class="book-info">
             <p><b><u>BOOK'S INFO</u></b></p>
-            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Title:</b> {{bookDetailed.title}}</p>
+            <!-- <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Title:</b> {{bookDetailed.title}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Author:</b> {{bookDetailed.authorName}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Genre:</b> {{bookDetailed.genre}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Country:</b> {{bookDetailed.country}}</p>
-            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Release year:</b> {{bookDetailed.year}}</p>
+            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Release year:</b> {{bookDetailed.year}}</p> -->
         </div>    
 
         <div class="author-info">
             <p><b><u>AUTHOR'S INFO</u></b></p>
-            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> First name:</b> {{bookDetailed.author.firstName}}</p>
+            <!-- <p><i class="fa fa-spinner" style="font-size:15px"></i><b> First name:</b> {{bookDetailed.author.firstName}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Last name:</b> {{bookDetailed.author.lastName}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Birth:</b> {{bookDetailed.author.birth}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Death:</b> {{bookDetailed.author.death}}</p>
-            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Nationality:</b> {{bookDetailed.author.nationality}}</p>
-        </div>
-
-        <div class="buttons">
-            <button (click) = "deleteBook()">DELETE</button>
-            <button (click) = "cancelDeleteBook()">CANCEL</button>
+            <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Nationality:</b> {{bookDetailed.author.nationality}}</p> -->
         </div>
     </div>
-</ng-container>
+<!-- </ng-container> -->
