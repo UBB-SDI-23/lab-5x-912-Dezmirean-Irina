@@ -60,6 +60,10 @@ export class AddBookComponent
         (err) => {console.log(err)}
       )
     }
+    else
+    {
+      alert("Please complete all fields!")
+    }
   }
 
 }

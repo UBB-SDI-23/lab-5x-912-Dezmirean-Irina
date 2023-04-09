@@ -44,10 +44,6 @@ export class EditComponent
               this.country = this.book.country;
               this.year = this.book.year;
               this.authorName = this.book.authorName;
-              // document.getElementById('title')?.setAttribute("placeholder",this.title);
-              // document.getElementById('genre')?.setAttribute("placeholder",this.genre);
-              // document.getElementById('country')?.setAttribute("placeholder",this.country);
-              // document.getElementById('year')?.setAttribute("placeholder",this.year);
             })
           });
   }
@@ -72,6 +68,10 @@ export class EditComponent
         },
         (err) => {console.log(err)}
       )
+    }
+    else
+    {
+      alert("Please complete all fields!")
     }
   }
 
