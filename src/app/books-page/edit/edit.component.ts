@@ -14,13 +14,13 @@ export class EditComponent
   authors: Author[] = [];
   book?: AddBookDto;
 
-  bookId: string =''
-  title: string=''
-  genre: string=''
-  country: string=''
-  year: string=''
-  authorName: string=''
-  auth?: Author;
+  bookId?: string
+  title?: string
+  genre?: string
+  country?: string
+  year?: string
+  authorName?: string
+  auth?: Author
 
   constructor(private apiService: ApiServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
@@ -35,7 +35,7 @@ export class EditComponent
 
         this.activatedRoute.params.subscribe(params =>
           {
-            this.bookId = params['bookId'];
+            this.bookId = params['book_id'];
             this.apiService.getBookById(this.bookId!).subscribe((book: AddBookDto) =>
             {
               this.book = book;
@@ -69,7 +69,8 @@ export class EditComponent
         {
           alert("The book has been modified!")
           this.router.navigateByUrl('books');
-        }
+        },
+        (err) => {console.log(err)}
       )
     }
   }
