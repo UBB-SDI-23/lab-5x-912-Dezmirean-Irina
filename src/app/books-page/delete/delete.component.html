@@ -20,10 +20,9 @@
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Death:</b> {{bookDetailed.author.death}}</p>
             <p><i class="fa fa-spinner" style="font-size:15px"></i><b> Nationality:</b> {{bookDetailed.author.nationality}}</p>
         </div>
-
-        <div class="buttons">
-            <button (click) = "deleteBook()">DELETE</button>
-            <button (click) = "cancelDeleteBook()">CANCEL</button>
-        </div>
     </div>
 </ng-container>
+<div class="buttons">
+    <button (click) = "deleteBook()">DELETE</button>
+    <button (click) = "cancelDeleteBook()">CANCEL</button>
+</div>
